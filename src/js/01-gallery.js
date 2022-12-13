@@ -9,7 +9,7 @@ const galleryContainer = document.querySelector('.gallery');
 const galleryMarkup = createGalleryMarkup(galleryItems);
 
 galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
-galleryContainer.addEventListener('click', onGalleryContainerClick);
+
 
 function createGalleryMarkup(images) {
   return images
@@ -27,12 +27,10 @@ function createGalleryMarkup(images) {
     })
     .join('');
 }
-function onGalleryContainerClick(event) {
-  event.preventDefault();
-}
 
 
-var lightbox = new SimpleLightbox('.gallery a', {
+
+new SimpleLightbox('.gallery a', {
 
   captionDelay: 250,
   captionSelector: 'img',
