@@ -9,7 +9,7 @@ let formData = {};
 
 populateInput();
 
-form.addEventListener('input', throtle(setMessageToLocal, 500));
+form.addEventListener('input', throttle(setMessageToLocal, 500));
 form.addEventListener('submit', resetAndSubmitForm);
 
 function resetAndSubmitForm(e) {
